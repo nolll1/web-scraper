@@ -1,0 +1,47 @@
+1.
+create a skeleton, in scraper.py, for scraping website,ekantipur, using playwright.
+make it simple and beginner friendly and dont overengineer
+
+
+2.
+navigate to the the Entertainment (मनो रञ्जन) section and extract the top 5 news articles
+include:
+title, image_url,category and author
+the selectors for each of these are as follows:
+category = .category-name
+article cards = div.category
+title = it is inside the article card with the h2 header
+img = it is in the img tag with src
+author = .author-name
+
+
+3.
+now, navigate to the cartoon section and extract the title, image_url and author-name of the first cartoon
+the container to the cartoon is .col-lg-4
+the caption is in .cartoon-description > p
+i did not find the author-name, so keep it as none if author-name isnt given
+
+
+4.
+Save the extracted data as a JSON file named output.json with the following structure:
+{
+"entertainment_news": [
+{
+"title": "Article headline here",
+"image_url": "https://...",
+"category": "मनो रञ्जन",
+"author": "Author Name"
+},
+{
+"title": "Second article headline",
+"image_url": "https://...",
+"category": "बलि उड",
+"author": null
+}
+],
+"cartoon_of_the_day": {
+"title": "Cartoon title",
+"image_url": "https://...",
+"author": "Cartoonist Name"
+}
+}
